@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-atedo-bg: #193250;
+  --color-atedo-accent: #FF6570;
+  --color-atedo-text: #ffffff;
+  --font-soho: "SohoPro", system-ui, sans-serif;
+}
+
+@font-face {
+  font-family: 'SohoPro';
+  src: url('https://raw.githubusercontent.com/atedo-ch/atedo-kiroadtrip-assets/main/SohoPro-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SohoPro';
+  src: url('https://raw.githubusercontent.com/atedo-ch/atedo-kiroadtrip-assets/main/SohoPro-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SohoPro';
+  src: url('https://raw.githubusercontent.com/atedo-ch/atedo-kiroadtrip-assets/main/SohoPro-ExtraBoldItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+body {
+  background-color: var(--color-atedo-bg);
+  color: var(--color-atedo-text);
+  font-family: var(--font-soho);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 121s linear infinite;
+}
+
+/* HubSpot Form Overrides */
+#hubspotForm .hs-form-field {
+  margin-bottom: 1.25rem;
+}
+
+#hubspotForm label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#hubspotForm .hs-input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.2s;
+  font-family: var(--font-soho);
+}
+
+#hubspotForm .hs-input:focus {
+  border-color: var(--color-atedo-accent);
+  box-shadow: 0 0 0 1px var(--color-atedo-accent);
+}
+
+#hubspotForm .hs-button {
+  width: 100%;
+  background-color: var(--color-atedo-accent);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-style: italic;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  margin-top: 1rem;
+  font-family: var(--font-soho);
+  font-size: 1rem;
+}
+
+#hubspotForm .hs-button:hover {
+  background-color: #ff4f5c;
+  box-shadow: 0 10px 15px -3px rgba(255, 101, 112, 0.2);
+}
+
+#hubspotForm .hs-error-msgs {
+  color: var(--color-atedo-accent);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+#hubspotForm .hs-richtext {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+#hubspotForm .inputs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#hubspotForm input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+  accent-color: var(--color-atedo-accent);
+}
+
+#hubspotForm .hs-form-booleancheckbox-display {
+  display: flex;
+  align-items: flex-start;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+#hubspotForm .hs-form-booleancheckbox-display span {
+  margin-top: -0.1rem;
+}
+
+
